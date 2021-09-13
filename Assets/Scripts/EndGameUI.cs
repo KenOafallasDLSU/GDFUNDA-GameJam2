@@ -11,6 +11,9 @@ public class EndGameUI : MonoBehaviour
   [SerializeField] private Image loseImage;
   [SerializeField] private Button exit;
   [SerializeField] private Button tryAgain;
+
+  public AudioSource scream;
+
   void Start()
   {
     winText.gameObject.SetActive(false);
@@ -45,5 +48,7 @@ public class EndGameUI : MonoBehaviour
     loseImage.gameObject.SetActive(true);
     exit.gameObject.SetActive(true);
     tryAgain.gameObject.SetActive(true);
+
+    scream.Play();
   }
 }
