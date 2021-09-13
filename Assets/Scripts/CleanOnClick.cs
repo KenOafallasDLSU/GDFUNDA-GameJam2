@@ -10,6 +10,7 @@ public class CleanOnClick : MonoBehaviour
     private int dirtIndex;
     private bool cleanable;
     private bool gameOver = false;
+    private bool firstClean = true;
 
     void Start()
     {
@@ -24,7 +25,6 @@ public class CleanOnClick : MonoBehaviour
 
       ChangeOpacity(0.6f);
       EventBroadcaster.Instance.PostEvent(EventNames.GameJam2.ON_DIRTY);
-      this.StartCoroutine(this.MakeDirty());
     }
 
     void OnMouseDown()
@@ -40,6 +40,11 @@ public class CleanOnClick : MonoBehaviour
         if(dirtyMaterial.color.a == 0.6f)
         {
           ChangeOpacity(0.3f);
+          if(firstClean)
+          {
+            this.StartCoroutine(this.MakeDirty());
+            firstClean = false;
+          }
         }
         else if(dirtyMaterial.color.a == 0.3f)
         {
@@ -47,13 +52,13 @@ public class CleanOnClick : MonoBehaviour
           EventBroadcaster.Instance.PostEvent(EventNames.GameJam2.ON_CLEAN);
         }
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(MechanicsValues.CLICK_COOLDOWN);
         cleanable = true;
     }
 
     private IEnumerator MakeDirty()
     {
-        yield return new WaitForSeconds(Random.Range(8, 14));
+        yield return new WaitForSeconds(Random.Range(MechanicsValues.RANDOM_TIME_LOWER, MechanicsValues.RANDOM_TIME_UPPER));
 
         if(gameOver == false){
           if(dirtyMaterial.color.a == 0.3f)
