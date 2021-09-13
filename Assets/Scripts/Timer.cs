@@ -12,10 +12,25 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
+        timeText.gameObject.SetActive(true);
         // Starts the timer automatically
         timerIsRunning = true;
 
+        EventBroadcaster.Instance.AddObserver(EventNames.GameJam2.ON_WIN, this.OnGameEndEvent);
+        EventBroadcaster.Instance.AddObserver(EventNames.GameJam2.ON_LOSE, this.OnGameEndEvent);
         EventBroadcaster.Instance.AddObserver(EventNames.GameJam2.ON_WIN, this.OnWinEvent);
+    }
+
+    private void OnDestroy()
+    {
+        EventBroadcaster.Instance.RemoveObserver(EventNames.GameJam2.ON_WIN);
+        EventBroadcaster.Instance.RemoveObserver(EventNames.GameJam2.ON_LOSE);
+        EventBroadcaster.Instance.RemoveObserver(EventNames.GameJam2.ON_WIN);
+    }
+
+    private void OnGameEndEvent()
+    {
+        timeText.gameObject.SetActive(false);
     }
 
     void Update()

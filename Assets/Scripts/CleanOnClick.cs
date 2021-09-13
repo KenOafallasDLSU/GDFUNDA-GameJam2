@@ -8,7 +8,7 @@ public class CleanOnClick : MonoBehaviour
     private Material[] materials;
     private Material dirtyMaterial;
     private int dirtIndex;
-    private bool cleanable;
+    private bool cleanable = true;
     private bool gameOver = false;
     private bool firstClean = true;
 
