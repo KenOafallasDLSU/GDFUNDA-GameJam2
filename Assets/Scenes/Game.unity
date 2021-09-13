@@ -4087,6 +4087,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8936821561328878518, guid: 80ad21e0b6638524cbf8387e53393b59, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8936821561335470678, guid: 80ad21e0b6638524cbf8387e53393b59, type: 3}
       propertyPath: m_Name
       value: PlayerController
@@ -4161,11 +4165,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8936821561342537654, guid: 80ad21e0b6638524cbf8387e53393b59, type: 3}
       propertyPath: m_MouseLook.XSensitivity
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8936821561342537654, guid: 80ad21e0b6638524cbf8387e53393b59, type: 3}
       propertyPath: m_MouseLook.YSensitivity
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80ad21e0b6638524cbf8387e53393b59, type: 3}
@@ -5605,6 +5609,7 @@ Mesh:
     offset: 0
     size: 0
     path: 
+<<<<<<< HEAD
 --- !u!1 &1076106988 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4572652205781336752, guid: 9b226a97832e0f04c95ef3ded76d8bc7, type: 3}
@@ -5622,6 +5627,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14dea35cf0e525b4a94995c995119a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> main
 --- !u!1 &1097130098 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2852454977860491699, guid: 87a8b2d67690b614280836fdba1477c7, type: 3}
@@ -7918,7 +7925,6 @@ GameObject:
   - component: {fileID: 1412561906}
   - component: {fileID: 1412561905}
   - component: {fileID: 1412561904}
-  - component: {fileID: 1412561903}
   - component: {fileID: 1412561908}
   m_Layer: 0
   m_Name: Table
@@ -7927,6 +7933,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!64 &1412561903
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7941,6 +7948,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2006405652}
+=======
+>>>>>>> main
 --- !u!33 &1412561904
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -12706,7 +12715,11 @@ GameObject:
   - component: {fileID: 1931982931}
   - component: {fileID: 1931982929}
   - component: {fileID: 1931982928}
+<<<<<<< HEAD
   - component: {fileID: 1931982932}
+=======
+  - component: {fileID: 1931982927}
+>>>>>>> main
   m_Layer: 0
   m_Name: TV
   m_TagString: Untagged
@@ -12779,20 +12792,6 @@ Transform:
   m_Father: {fileID: 1164472478}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: -2.11, y: 86.469, z: 0}
---- !u!64 &1931982932
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1931982926}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 32812633}
 --- !u!43 &1941372230
 Mesh:
   m_ObjectHideFlags: 0
