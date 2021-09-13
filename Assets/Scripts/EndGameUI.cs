@@ -25,6 +25,12 @@ public class EndGameUI : MonoBehaviour
     EventBroadcaster.Instance.AddObserver(EventNames.GameJam2.ON_LOSE, this.OnLoseEvent);
   }
 
+  private void OnDestroy()
+  {
+      EventBroadcaster.Instance.RemoveObserver(EventNames.GameJam2.ON_WIN);
+      EventBroadcaster.Instance.RemoveObserver(EventNames.GameJam2.ON_LOSE);
+  }
+
   private void OnWinEvent()
   {
     //winText.gameObject.SetActive(true);
